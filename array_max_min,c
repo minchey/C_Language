@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main(void)
+{
+    int a,b,c,d;
+    scanf("%d",&a);
+    int array[a];
+    for(b=0;b<a;b++)
+    {
+        scanf("%d",&array[b]);
+    }
+    c = array[0];
+    for(b=0;b<a;b++)//최솟값
+    {
+        if(array[b]<=c)
+        c=array[b];
+    }
+    d= array[0];
+    for(b=0;b<a;b++)//최댓값
+    {
+        if(array[b]>=d)
+        d=array[b];
+    }
+    printf("%d %d\n",c,d);
+	return 0;
+}
