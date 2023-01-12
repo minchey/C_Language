@@ -1,15 +1,13 @@
-//무기강화 프로그램
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-
 
 int main(void)
 {
     int percentage = 95;
     srand(time(NULL));
 
-    int weapon =1;
+    int weapon =0;
     char answer;
     while(1) {
         answer = 'a';
@@ -25,12 +23,14 @@ int main(void)
         printf("강화를 더 하시겠습니까? 다음 강화확률 %d\% Y/N ",percentage);
         scanf("%c",&answer);
         if(answer=='y') {
+            printf("강화를 시작합니다.\n");
             continue;
         } else {
-            printf("강화를 멈춥니다. 현재 무기 강화는 +%d\n",weapon);
+            
             break;
         }
 
     }
+    printf("강화를 멈춥니다. 현재 무기 강화는 +%d\n",weapon);
     return 0;
 }
